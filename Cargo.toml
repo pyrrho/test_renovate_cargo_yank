@@ -4,3 +4,17 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+axum = { version = "0.8.0", features = [
+    "form",
+    "http1",
+    "http2",
+    "json",
+    "macros",
+    "matched-path",
+    "multipart",
+    "original-uri",
+    "query",
+    "tokio",
+    "tower-log",
+] }
+axum-extra = "0.10.0"
