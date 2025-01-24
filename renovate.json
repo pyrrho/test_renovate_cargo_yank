@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+
+  "rollbackPrs": true,
+
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+
+  "configMigration": true,
+  "osvVulnerabilityAlerts": true
+}
