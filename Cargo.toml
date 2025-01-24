@@ -17,4 +17,4 @@ axum = { version = "0.8.0", features = [
     "tokio",
     "tower-log",
 ] }
-axum-extra = "0.10.0"
+axum-extra = "0.11.0"
