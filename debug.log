@@ -1,0 +1,444 @@
+DEBUG: Using RE2 regex engine
+DEBUG: Parsing configs
+DEBUG: Checking for config file in config.js
+DEBUG: No config file found on disk - skipping
+DEBUG: File config
+       "config": {}
+DEBUG: CLI config
+       "config": {"repositories": ["pyrrho/test_renovate_cargo_yank"], "token": "***********"}
+DEBUG: Env config
+       "config": {"hostRules": []}
+DEBUG: Combined config
+       "config": {
+         "hostRules": [],
+         "repositories": ["pyrrho/test_renovate_cargo_yank"],
+         "token": "***********"
+       }
+DEBUG: Enabling forkProcessing while in non-autodiscover mode
+DEBUG: Enabling onboardingNoDeps while in non-autodiscover mode
+DEBUG: Found valid git version: 2.48.1
+DEBUG: Setting global hostRules
+DEBUG: Using default github endpoint: https://api.github.com/
+DEBUG: hostRules: authentication already set for api.github.com
+DEBUG: Using queue: host=api.github.com, concurrency=16
+DEBUG: GET https://api.github.com/user/emails = (code=ERR_NON_2XX_3XX_RESPONSE, statusCode=403 retryCount=0, duration=89)
+DEBUG: Cannot read user/emails endpoint on GitHub to retrieve gitAuthor
+DEBUG: Platform config
+       "platformConfig": {
+         "hostType": "github",
+         "endpoint": "https://api.github.com/",
+         "isGHApp": false,
+         "isGhe": false,
+         "userDetails": {
+           "username": "pyrrho",
+           "name": "Drew Pirrone-Brusse",
+           "id": 361216
+         },
+         "userEmail": null
+       },
+       "renovateUsername": "pyrrho"
+DEBUG: Adding token authentication for api.github.com (hostType=github) to hostRules
+DEBUG: Using baseDir: /tmp/renovate
+DEBUG: Using cacheDir: /tmp/renovate/cache
+DEBUG: Using containerbaseDir: /tmp/renovate/cache/containerbase
+DEBUG: Initializing Renovate internal cache into /tmp/renovate/cache/renovate/renovate-cache-v1
+DEBUG: Commits limit = null
+DEBUG: Setting global hostRules
+DEBUG: Adding token authentication for api.github.com (hostType=github) to hostRules
+DEBUG: validatePresets()
+DEBUG: Reinitializing hostRules for repo
+DEBUG: Clearing hostRules
+DEBUG: Adding token authentication for api.github.com (hostType=github) to hostRules
+ INFO: Repository started (repository=pyrrho/test_renovate_cargo_yank)
+       "renovateVersion": "39.133.2"
+DEBUG: Using localDir: /tmp/renovate/repos/github/pyrrho/test_renovate_cargo_yank (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: PackageFiles.clear() - Package files deleted (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: initRepo("pyrrho/test_renovate_cargo_yank") (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: hostRules: authentication already set for api.github.com (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using queue: host=api.github.com, concurrency=16 (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: pyrrho/test_renovate_cargo_yank default branch = main (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using personal access token for git init (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Resetting npmrc (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Resetting npmrc (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: checkOnboarding() (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: isOnboarded() (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: findPr(renovate/configure, Configure Renovate, !open) (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: http cache: saving https://api.github.com/repos/pyrrho/test_renovate_cargo_yank/pulls?per_page=100&state=all&sort=updated&direction=desc&page=1 (etag="16bb1fa43db3459bbc4f9b2122a06b2b99bc3405a27d89e7629bc590803dde1a", lastModified=undefined) (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: getPrList success (repository=pyrrho/test_renovate_cargo_yank)
+       "pullsTotal": 0,
+       "requestsTotal": 1,
+       "apiQuotaAffected": true
+DEBUG: findPr(renovate/configure, chore: Configure Renovate, !open) (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: findFile(renovate.json) (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Initializing git repository into /tmp/renovate/repos/github/pyrrho/test_renovate_cargo_yank (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Performing blobless clone (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: git clone completed (repository=pyrrho/test_renovate_cargo_yank)
+       "durationMs": 636
+DEBUG: latest repository commit (repository=pyrrho/test_renovate_cargo_yank)
+       "latestCommit": {
+         "hash": "ea21d0456aeaf0314cd98de1d96afbdad9a3f383",
+         "date": "2025-01-24T14:45:25-05:00",
+         "message": "renovate.json config",
+         "refs": "HEAD -> main, origin/main, origin/HEAD",
+         "body": "",
+         "author_name": "Drew Pirrone-Brusse",
+         "author_email": "dpb@ludumipsum.com"
+       }
+DEBUG: Config file exists, fileName: renovate.json (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Retrieving issueList (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Retrieved 0 issues (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Repo is onboarded (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Found renovate.json config file (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Repository config (repository=pyrrho/test_renovate_cargo_yank)
+       "fileName": "renovate.json",
+       "config": {
+         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+         "extends": ["config:recommended"],
+         "rollbackPrs": true,
+         "lockFileMaintenance": {"enabled": true},
+         "configMigration": true,
+         "osvVulnerabilityAlerts": true
+       }
+DEBUG: migrateAndValidate() (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: No config migration necessary (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Found repo ignorePaths (repository=pyrrho/test_renovate_cargo_yank)
+       "ignorePaths": [
+         "**/node_modules/**",
+         "**/bower_components/**",
+         "**/vendor/**",
+         "**/examples/**",
+         "**/__tests__/**",
+         "**/test/**",
+         "**/tests/**",
+         "**/__fixtures__/**"
+       ]
+DEBUG: No vulnerability alerts enabled for repo (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: No vulnerability alerts found (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: findIssue(Dependency Dashboard) (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: No baseBranches (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: extract() (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Setting current branch to main (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: latest commit (repository=pyrrho/test_renovate_cargo_yank)
+       "branchName": "main",
+       "latestCommitDate": "2025-01-24T14:45:25-05:00"
+DEBUG: Using file match: (^|/)tasks/[^/]+\.ya?ml$ for manager ansible (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)(galaxy|requirements)(\.ansible)?\.ya?ml$ for manager ansible-galaxy (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)\.tool-versions$ for manager asdf (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/).azuredevops/.+\.ya?ml$ for manager azure-pipelines (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: azure.*pipelines?.*\.ya?ml$ for manager azure-pipelines (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)batect(-bundle)?\.ya?ml$ for manager batect (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)batect$ for manager batect-wrapper (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)WORKSPACE(|\.bazel|\.bzlmod)$ for manager bazel (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: \.WORKSPACE\.bazel$ for manager bazel (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: \.bzl$ for manager bazel (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/|\.)MODULE\.bazel$ for manager bazel-module (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)\.bazelversion$ for manager bazelisk (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: \.bicep$ for manager bicep (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)\.?bitbucket-pipelines\.ya?ml$ for manager bitbucket-pipelines (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)bitrise\.ya?ml$ for manager bitrise (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: buildkite\.ya?ml for manager buildkite (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: \.buildkite/.+\.ya?ml$ for manager buildkite (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)project\.toml$ for manager buildpacks (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)bun\.lockb?$ for manager bun (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)\.bun-version$ for manager bun-version (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)Gemfile$ for manager bundler (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: \.cake$ for manager cake (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)Cargo\.toml$ for manager cargo (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)\.circleci/.+\.ya?ml$ for manager circleci (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)cloudbuild\.ya?ml for manager cloudbuild (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)Podfile$ for manager cocoapods (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)([\w-]*)composer\.json$ for manager composer (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)conanfile\.(txt|py)$ for manager conan (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)\.copier-answers(\..+)?\.ya?ml for manager copier (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)cpanfile$ for manager cpanfile (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)(?:deps|bb)\.edn$ for manager deps-edn (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: ^.devcontainer/devcontainer.json$ for manager devcontainer (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: ^.devcontainer.json$ for manager devcontainer (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)(?:docker-)?compose[^/]*\.ya?ml$ for manager docker-compose (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/|\.)([Dd]ocker|[Cc]ontainer)file$ for manager dockerfile (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)([Dd]ocker|[Cc]ontainer)file[^/]*$ for manager dockerfile (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)\.drone\.yml$ for manager droneci (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)fleet\.ya?ml for manager fleet (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (?:^|/)gotk-components\.ya?ml$ for manager flux (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)\.fvm/fvm_config\.json$ for manager fvm (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)\.fvmrc$ for manager fvm (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)\.gitmodules$ for manager git-submodules (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)(workflow-templates|\.(?:github|gitea|forgejo)/(?:workflows|actions))/.+\.ya?ml$ for manager github-actions (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)action\.ya?ml$ for manager github-actions (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: \.gitlab-ci\.ya?ml$ for manager gitlabci (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: \.gitlab-ci\.ya?ml$ for manager gitlabci-include (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)gleam.toml$ for manager gleam (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)go\.mod$ for manager gomod (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: \.gradle(\.kts)?$ for manager gradle (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)gradle\.properties$ for manager gradle (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)gradle/.+\.toml$ for manager gradle (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)buildSrc/.+\.kt$ for manager gradle (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: \.versions\.toml$ for manager gradle (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)versions.props$ for manager gradle (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)versions.lock$ for manager gradle (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)gradle/wrapper/gradle-wrapper\.properties$ for manager gradle-wrapper (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: \.cabal$ for manager haskell-cabal (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)requirements\.ya?ml$ for manager helm-requirements (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)values\.ya?ml$ for manager helm-values (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)helmfile\.ya?ml(?:\.gotmpl)?$ for manager helmfile (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)Chart\.ya?ml$ for manager helmv3 (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)bin/hermit$ for manager hermit (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: ^Formula/[^/]+[.]rb$ for manager homebrew (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: \.html?$ for manager html (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)plugins\.(txt|ya?ml)$ for manager jenkins (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)jsonnetfile\.json$ for manager jsonnet-bundler (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: ^.+\.main\.kts$ for manager kotlin-script (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)kustomization\.ya?ml$ for manager kustomize (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)project\.clj$ for manager leiningen (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/|\.)pom\.xml$ for manager maven (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: ^(((\.mvn)|(\.m2))/)?settings\.xml$ for manager maven (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)\.mvn/extensions\.xml$ for manager maven (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|\/).mvn/wrapper/maven-wrapper.properties$ for manager maven-wrapper (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)package\.js$ for manager meteor (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)Mintfile$ for manager mint (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)\.?mise\.toml$ for manager mise (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)\.?mise/config\.toml$ for manager mise (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)mix\.exs$ for manager mix (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)flake\.nix$ for manager nix (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)\.node-version$ for manager nodenv (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)package\.json$ for manager npm (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: \.(?:cs|fs|vb)proj$ for manager nuget (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: \.(?:props|targets)$ for manager nuget (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)dotnet-tools\.json$ for manager nuget (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)global\.json$ for manager nuget (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)\.nvmrc$ for manager nvm (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)src/main/features/.+\.json$ for manager osgi (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)pyproject\.toml$ for manager pep621 (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)[\w-]*requirements([-.]\w+)?\.(txt|pip)$ for manager pip_requirements (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)setup\.py$ for manager pip_setup (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)Pipfile$ for manager pipenv (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)pyproject\.toml$ for manager poetry (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)\.pre-commit-config\.ya?ml$ for manager pre-commit (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)pubspec\.ya?ml$ for manager pub (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)Puppetfile$ for manager puppet (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)\.python-version$ for manager pyenv (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)\.ruby-version$ for manager ruby-version (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)runtime.txt$ for manager runtime-version (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: \.sbt$ for manager sbt (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: project/[^/]*\.scala$ for manager sbt (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: project/build\.properties$ for manager sbt (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)repositories$ for manager sbt (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)\.scalafmt.conf$ for manager scalafmt (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)setup\.cfg$ for manager setup-cfg (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)Package\.swift for manager swift (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: \.tf$ for manager terraform (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)\.terraform-version$ for manager terraform-version (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)terragrunt\.hcl$ for manager terragrunt (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)\.terragrunt-version$ for manager terragrunt-version (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: \.tflint\.hcl$ for manager tflint-plugin (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: ^\.travis\.ya?ml$ for manager travis (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)\.vela\.ya?ml$ for manager velaci (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: (^|/)vendir\.yml$ for manager vendir (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using file match: ^\.woodpecker(?:/[^/]+)?\.ya?ml$ for manager woodpecker (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Matched 1 file(s) for manager cargo: Cargo.toml (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Neither .cargo/config nor .cargo/config.toml found (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Found lock file Cargo.lock for packageFile: Cargo.toml (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: manager extract durations (ms) (repository=pyrrho/test_renovate_cargo_yank)
+       "managers": {"cargo": 13}
+DEBUG: Found cargo package files (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Found 1 package file(s) (repository=pyrrho/test_renovate_cargo_yank)
+ INFO: Dependency extraction complete (repository=pyrrho/test_renovate_cargo_yank, baseBranch=main)
+       "stats": {
+         "managers": {"cargo": {"fileCount": 1, "depCount": 2}},
+         "total": {"fileCount": 1, "depCount": 2}
+       }
+DEBUG: fetchVulnerabilities() - osvVulnerabilityAlerts=true (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: hostRules: no authentication for raw.githubusercontent.com (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using queue: host=raw.githubusercontent.com, concurrency=16 (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: downloading crate metadata (repository=pyrrho/test_renovate_cargo_yank)
+       "crateUrl": "https://crates.io/api/v1/crates/axum?include=",
+       "packageName": "axum",
+       "registryUrl": "https://crates.io"
+DEBUG: Using throttle 1000 intervalMs for host crates.io (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Using queue: host=crates.io, concurrency=16 (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: downloading crate metadata (repository=pyrrho/test_renovate_cargo_yank)
+       "crateUrl": "https://crates.io/api/v1/crates/axum-extra?include=",
+       "packageName": "axum-extra",
+       "registryUrl": "https://crates.io"
+DEBUG: PackageFiles.add() - Package file saved for base branch (repository=pyrrho/test_renovate_cargo_yank, baseBranch=main)
+DEBUG: Package releases lookups complete (repository=pyrrho/test_renovate_cargo_yank, baseBranch=main)
+DEBUG: Repository libYears (repository=pyrrho/test_renovate_cargo_yank)
+       "managerLibYears": {"cargo": 0},
+       "totalLibYears": 0
+DEBUG: branchifyUpgrades (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: detectSemanticCommits() (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: getCommitMessages (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: semanticCommits: detected "unknown" (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: semanticCommits: disabled (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: 1 flattened updates found:  (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Returning 1 branch(es) (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: config.repoIsOnboarded=true (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: packageFiles with updates (repository=pyrrho/test_renovate_cargo_yank, baseBranch=main)
+       "config": {
+         "cargo": [
+           {
+             "deps": [
+               {
+                 "currentValue": "0.8.0",
+                 "managerData": {"nestedVersion": true},
+                 "datasource": "crate",
+                 "depName": "axum",
+                 "depType": "dependencies",
+                 "lockedVersion": "0.8.2",
+                 "updates": [],
+                 "packageName": "axum",
+                 "versioning": "cargo",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/tokio-rs/axum",
+                 "registryUrl": "https://crates.io",
+                 "dependencyUrl": "https://crates.io/crates/axum",
+                 "currentVersion": "0.8.2",
+                 "fixedVersion": "0.8.2"
+               },
+               {
+                 "currentValue": "0.11.0",
+                 "managerData": {"nestedVersion": false},
+                 "datasource": "crate",
+                 "depName": "axum-extra",
+                 "depType": "dependencies",
+                 "lockedVersion": "0.11.0",
+                 "updates": [],
+                 "packageName": "axum-extra",
+                 "versioning": "cargo",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/tokio-rs/axum",
+                 "registryUrl": "https://crates.io",
+                 "dependencyUrl": "https://crates.io/crates/axum-extra",
+                 "currentVersion": "0.11.0",
+                 "fixedVersion": "0.11.0"
+               }
+             ],
+             "packageFileVersion": "0.1.0",
+             "lockFiles": ["Cargo.lock"],
+             "packageFile": "Cargo.toml"
+           }
+         ]
+       }
+DEBUG: detectSemanticCommits() (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: semanticCommits: returning "disabled" from cache (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: processRepo() (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Processing 1 branch: renovate/lock-file-maintenance (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: getBranchPr(renovate/lock-file-maintenance) (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: findPr(renovate/lock-file-maintenance, undefined, open) (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: 0 PRs are currently open (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: ConcurrentPRs count = 0 (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: 0 already existing branches found. (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Branches count = 0 (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Calculating PRs created so far in this hour currentHourStart=2025-01-24T19:00:00.000Z (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: 0 PRs have been created so far in this hour. (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: HourlyPRs count = 0 (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: syncBranchState() (repository=pyrrho/test_renovate_cargo_yank, branch=renovate/lock-file-maintenance)
+DEBUG: syncBranchState(): Branch cache not found, creating minimal branchState (repository=pyrrho/test_renovate_cargo_yank, branch=renovate/lock-file-maintenance)
+DEBUG: getBranchPr(renovate/lock-file-maintenance) (repository=pyrrho/test_renovate_cargo_yank, branch=renovate/lock-file-maintenance)
+DEBUG: findPr(renovate/lock-file-maintenance, undefined, open) (repository=pyrrho/test_renovate_cargo_yank, branch=renovate/lock-file-maintenance)
+DEBUG: branchExists=false (repository=pyrrho/test_renovate_cargo_yank, branch=renovate/lock-file-maintenance)
+DEBUG: dependencyDashboardCheck=undefined (repository=pyrrho/test_renovate_cargo_yank, branch=renovate/lock-file-maintenance)
+DEBUG: recreateClosed is true. No need to check for closed PR. (repository=pyrrho/test_renovate_cargo_yank, branch=renovate/lock-file-maintenance)
+DEBUG: Open PR Count: 0, Existing Branch Count: 0, Hourly PR Count: 0 (repository=pyrrho/test_renovate_cargo_yank, branch=renovate/lock-file-maintenance)
+DEBUG: prHourlyLimit of the upgrades present in this branch (repository=pyrrho/test_renovate_cargo_yank, branch=renovate/lock-file-maintenance)
+       "limits": [{"prHourlyLimit": 2}]
+DEBUG: Calculated lowest prHourlyLimit among the upgrades present in this branch is 2. (repository=pyrrho/test_renovate_cargo_yank, branch=renovate/lock-file-maintenance)
+DEBUG: branchConcurrentLimit of the upgrades present in this branch (repository=pyrrho/test_renovate_cargo_yank, branch=renovate/lock-file-maintenance)
+       "limits": [{"branchConcurrentLimit": null}]
+DEBUG: Calculated lowest branchConcurrentLimit among the upgrades present in this branch is 10. (repository=pyrrho/test_renovate_cargo_yank, branch=renovate/lock-file-maintenance)
+DEBUG: Checking schedule(schedule=before 4am on monday, tz=null, now=2025-01-24T19:55:39.642Z) (repository=pyrrho/test_renovate_cargo_yank, branch=renovate/lock-file-maintenance)
+DEBUG: Checking 1 schedule(s) (repository=pyrrho/test_renovate_cargo_yank, branch=renovate/lock-file-maintenance)
+DEBUG: Checking schedule "before 4am on monday" (repository=pyrrho/test_renovate_cargo_yank, branch=renovate/lock-file-maintenance)
+       "parsedSchedule": {"schedules": [{"t_b": [14400], "d": [2]}], "exceptions": [], "error": -1}
+DEBUG: Package not scheduled (repository=pyrrho/test_renovate_cargo_yank, branch=renovate/lock-file-maintenance)
+DEBUG: Skipping branch creation as not within schedule (repository=pyrrho/test_renovate_cargo_yank, branch=renovate/lock-file-maintenance)
+DEBUG: http cache: saving https://api.github.com/repos/pyrrho/test_renovate_cargo_yank/contents/renovate.json (etag=W/"acdad36013f1a27c85af517e21606388a590646f", lastModified=Fri, 24 Jan 2025 19:45:25 GMT) (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Config does not need migration (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: ensureDependencyDashboard() (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Ensuring Dependency Dashboard (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Checking packageFiles for deprecated packages (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: ensureIssue(Dependency Dashboard) (repository=pyrrho/test_renovate_cargo_yank)
+ INFO: Issue created (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: checkReconfigureBranch() (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: No reconfigure branch found (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Removing any stale branches (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: config.repoIsOnboarded=true (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: No renovate branches found (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: PackageFiles.clear() - Package files deleted (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Branch summary (repository=pyrrho/test_renovate_cargo_yank)
+       "cacheModified": undefined,
+       "baseBranches": [{"branchName": "main", "sha": "ea21d0456aeaf0314cd98de1d96afbdad9a3f383"}],
+       "branches": [],
+       "defaultBranch": "main",
+       "inactiveBranches": ["renovate/lock-file-maintenance"]
+DEBUG: branches info extended (repository=pyrrho/test_renovate_cargo_yank)
+       "branchesInformation": [
+         {
+           "branchName": "renovate/lock-file-maintenance",
+           "prNo": null,
+           "prTitle": "Lock file maintenance",
+           "result": "not-scheduled",
+           "upgrades": [
+             {
+               "displayPending": "",
+               "packageFile": "Cargo.toml",
+               "updateType": "lockFileMaintenance"
+             }
+           ]
+         }
+       ]
+DEBUG: Renovate repository PR statistics (repository=pyrrho/test_renovate_cargo_yank)
+       "stats": {"total": 0, "open": 0, "closed": 0, "merged": 0}
+DEBUG: Repository result: done, status: onboarded, enabled: true, onboarded: true (repository=pyrrho/test_renovate_cargo_yank)
+DEBUG: Repository timing splits (milliseconds) (repository=pyrrho/test_renovate_cargo_yank)
+       "splits": {"init": 2054, "extract": 155, "lookup": 6918, "onboarding": 1, "update": 25},
+       "total": 9809
+DEBUG: Package cache statistics (repository=pyrrho/test_renovate_cargo_yank)
+       "get": {"count": 4, "avgMs": 2, "medianMs": 1, "maxMs": 6, "totalMs": 8},
+       "set": {"count": 4, "avgMs": 4, "medianMs": 4, "maxMs": 7, "totalMs": 15}
+DEBUG: HTTP statistics (repository=pyrrho/test_renovate_cargo_yank)
+       "hosts": {
+         "api.github.com": {
+           "count": 5,
+           "reqAvgMs": 253,
+           "reqMedianMs": 267,
+           "reqMaxMs": 349,
+           "queueAvgMs": 0,
+           "queueMedianMs": 0,
+           "queueMaxMs": 0
+         },
+         "crates.io": {
+           "count": 2,
+           "reqAvgMs": 84,
+           "reqMedianMs": 126,
+           "reqMaxMs": 126,
+           "queueAvgMs": 477,
+           "queueMedianMs": 951,
+           "queueMaxMs": 951
+         },
+         "raw.githubusercontent.com": {
+           "count": 2,
+           "reqAvgMs": 135,
+           "reqMedianMs": 162,
+           "reqMaxMs": 162,
+           "queueAvgMs": 1,
+           "queueMedianMs": 1,
+           "queueMaxMs": 1
+         }
+       },
+       "requests": 9
+DEBUG: HTTP cache statistics (repository=pyrrho/test_renovate_cargo_yank)
+       "https://api.github.com": {
+         "/repos/pyrrho/test_renovate_cargo_yank/contents/renovate.json": {
+           "hit": 0,
+           "miss": 1
+         },
+         "/repos/pyrrho/test_renovate_cargo_yank/pulls": {"hit": 0, "miss": 1}
+       }
+DEBUG: Lookup statistics (repository=pyrrho/test_renovate_cargo_yank)
+       "crate": {"count": 2, "avgMs": 728, "medianMs": 1181, "maxMs": 1181, "totalMs": 1456}
+ INFO: Repository finished (repository=pyrrho/test_renovate_cargo_yank)
+       "cloned": true,
+       "durationMs": 9809
+DEBUG: Checking file package cache for expired items
+DEBUG: Deleted 0 of 4 file cached entries in 16ms
